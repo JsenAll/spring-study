@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
+    <!--通过java 自带的注解实现 Spring 的自动装配-->
+    <bean id="dog" class="jsen.res.Dog"></bean>
+
+    <bean id="cat1" class="jsen.res.Cat">
+        <property name="name" value="红马"></property>
+    </bean>
+    <bean id="cat2" class="jsen.res.Cat">
+        <property name="name" value="黑马"></property>
+    </bean>
+
+    <bean id="userR" class="jsen.res.UserR">
+        <property name="name" value="Jsen"></property>
+    </bean>
+</beans>

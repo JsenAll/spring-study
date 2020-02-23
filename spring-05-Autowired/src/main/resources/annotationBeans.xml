@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
+
+    <bean id="dog" class="jsen.pojo.Dog"></bean>
+
+    <bean id="catadsf" class="jsen.pojo.Cat">
+        <property name="name" value="黑猫"></property>
+    </bean>
+
+    <bean id="catred" class="jsen.pojo.Cat">
+        <property name="name" value="红猫"></property>
+    </bean>
+
+    <bean id="persion" class="jsen.pojo.Persion"></bean>
+
+</beans>
