@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="address" class="jsen.pojo.Address">
+        <property name="address" value="上海"></property>
+    </bean>
+    <bean id="student" class="jsen.pojo.Student">
+        <!--普通的Set注入-->
+        <property name="name" value="蒋厚森"></property>
+        <!--第二种 bean注入-->
+        <property name="address" ref="address"></property>
+        <!--  数组 array      -->
+        <property name="books">
+            <array>
+                <value>每天一杯酒</value>
+                <value>你在哪里</value>
+                <value>还在吗?</value>
+            </array>
+
+        </property>
+        <!--    map 比较特殊    -->
+        <property name="card">
+            <map>
+                <entry value="身份证" key="2929293994050522"></entry>
+                <entry value="银行卡" key="5798375023085982609"></entry>
+            </map>
+        </property>
+        <!--list-->
+        <property name="game">
+            <set>
+                <value>三国杀</value>
+                <value>王者荣耀</value>
+            </set>
+        </property>
+
+        <property name="hobbys">
+            <list>
+                <value>三国杀</value>
+                <value>王者荣耀</value>
+            </list>
+        </property>
+
+        <property name="wife">
+            <null/>
+        </property>
+
+        <property name="info">
+            <props>
+                <prop key="学号">2014416606.jhs</prop>
+            </props>
+        </property>
+
+    </bean>
+
+</beans>

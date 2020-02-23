@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--P命名空间注入
+           xmlns:p="http://www.springframework.org/schema/p"
+-->
+    <bean id="user" class="jsen.pojo.User"
+          p:name="蒋厚森"
+          p:age="18"
+    ></bean>
+    <!--C命名空间注入
+           xmlns:c="http://www.springframework.org/schema/c"
+-->
+    <bean id="user2" class="jsen.pojo.User" c:name="蒋厚森c" c:age="18" scope="prototype"></bean>
+
+</beans>
