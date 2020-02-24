@@ -32,4 +32,6 @@ public class Mytest {
         UserR user = context.getBean("userR", UserR.class);
         System.out.println(user.toString());
     }
+
+
 }
