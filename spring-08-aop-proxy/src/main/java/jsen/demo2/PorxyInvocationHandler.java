@@ -28,6 +28,11 @@ public class PorxyInvocationHandler implements InvocationHandler {
     //处理代理实例 并返回结果
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Object invoke = method.invoke(target, args);
+        add();
         return invoke;
+    }
+
+    public void add() {
+        System.out.println("增强此方法");
     }
 }
