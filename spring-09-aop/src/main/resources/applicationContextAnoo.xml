@@ -10,6 +10,6 @@
     <!--注册bean-->
     <bean id="userService" class="com.jsen.service.UserServiceImpl"></bean>
     <bean id="anoo" class="com.jsen.diy.AnnotationCut"></bean>
-<!---->
+    <!--想使用 注解 实现 aop 必须-->
     <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 </beans>
