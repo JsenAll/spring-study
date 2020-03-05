@@ -8,4 +8,8 @@
         http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <import resource="spring-mybatis.xml"></import>
+
+    <bean id="userMapperImpl" class="org.jsen.dao.UserMapperImpl">
+        <property name="sqlSession" ref="sqlSession"></property>
+    </bean>
 </beans>

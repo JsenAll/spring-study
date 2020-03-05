@@ -7,6 +7,11 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <!--整个 页面  写死的  以后放到一个新项目里面 直接修改一次  以后再也不用动了
+            mapperLocations 需要动一下
+    -->
+
+
     <!--
         DataSource:使用Spring 的数据源 替换Mybatis的配置  也可以使用 C3P0 dbcp druid
         我们这里使用Spring 提供的 JDBC
@@ -34,7 +39,5 @@
         <constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
     </bean>
 
-    <bean id="userMapperImpl" class="org.jsen.dao.UserMapperImpl">
-        <property name="sqlSession" ref="sqlSession"></property>
-    </bean>
+
 </beans>
