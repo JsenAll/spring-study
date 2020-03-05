@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/aop
-        http://www.springframework.org/schema/aop/spring-aop.xsd">
-
-    <!--整个 页面  写死的  以后放到一个新项目里面 直接修改一次  以后再也不用动了
-            mapperLocations 需要动一下
-    -->
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <!--
-        DataSource:使用Spring 的数据源 替换Mybatis的配置  也可以使用 C3P0 dbcp druid
-        我们这里使用Spring 提供的 JDBC
-    -->
+
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
         <property name="url"
@@ -24,23 +14,16 @@
         <property name="password" value="jhs123"></property>
     </bean>
 
-    <!--  SqlSessionFactory   -->
+
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
+
         <!--        绑定mybatis   就是绑定mybatis 的核心配文件-->
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
         <!-- 绑定具体的接口对应 *Mapper.xml -->
         <property name="mapperLocations" value="classpath:org/jsen/dao/*.xml"></property>
+    </bean>
 
-    </bean>
-    <!--SqlSessionTemplate 就是 我们在Mybatis中学的SqlSession
-    第一种方式 需要 SqlSessionTemplate
-    第二种 SqlSessionTemplate 不需要注入  更加简单
-    -->
-    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-        <!--        只能通过构造器注入  SqlSessionTemplate没有set 方法  可以看源码-->
-        <constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
-    </bean>
 
 
 </beans>

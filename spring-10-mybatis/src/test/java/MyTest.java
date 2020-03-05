@@ -14,4 +14,13 @@ public class MyTest {
         List<User> users = userMapperImpl.selectUser();
         System.out.println(users);
     }
+
+
+    @Test
+    public void test02() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserMapper userMapperImpl = context.getBean("userMapperImpl2", UserMapper.class);
+        List<User> users = userMapperImpl.selectUser();
+        System.out.println(users);
+    }
 }
