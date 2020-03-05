@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--configuration 核心配置文件-->
+<configuration>
+
+    <!--  在spring中  mybatis 的核心配置文件 一般会保留  设置  别名
+          其实 在spring中 不保留也可以  spring 也可以帮他做了
+          这样的目的 后期开发 清楚明了
+        -->
+    <!--设置-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <!--别名-->
+    <typeAliases>
+        <package name="org.jsen.pojo"/>
+    </typeAliases>
+
+</configuration>
