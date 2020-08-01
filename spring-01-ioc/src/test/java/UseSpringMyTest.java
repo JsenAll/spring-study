@@ -1,4 +1,4 @@
-import dao.UserDaoMqlImpl;
+import dao.UserDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class UseSpringMyTest {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
-        UserDaoMqlImpl userDaoMqlImpl = (UserDaoMqlImpl) applicationContext.getBean("userDaoMqlImpl");
+        UserDao userDaoMqlImpl = (UserDao) applicationContext.getBean("userDaoOracleImpl");
         userDaoMqlImpl.getUser();
         System.out.println();
     }
