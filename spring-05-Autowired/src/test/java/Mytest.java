@@ -33,5 +33,9 @@ public class Mytest {
         System.out.println(user.toString());
     }
 
+    public static void main(String[] args) {
+        System.out.println("季后赛");
+    }
+
 
 }
