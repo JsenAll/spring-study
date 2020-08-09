@@ -15,10 +15,6 @@ public class User {
         this.name = name;
         this.pwd = pwd;
     }
-    public User( String name, String pwd) {
-        this.name = name;
-        this.pwd = pwd;
-    }
 
     public User() {
     }

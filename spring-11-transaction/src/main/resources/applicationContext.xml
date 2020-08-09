@@ -5,7 +5,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <import resource="spring-mybatis.xml"></import>
-    <bean id="userMapperImpl3" class="org.jsen.dao.UserMapperImpl3">
+    <bean id="userMapperImpl2" class="org.jsen.dao.UserMapperImpl2">
         <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
 
     </bean>

@@ -1,5 +1,5 @@
 package dao;
 
 public interface UserDao {
-    void getUser();
+    public void getUser();
 }
