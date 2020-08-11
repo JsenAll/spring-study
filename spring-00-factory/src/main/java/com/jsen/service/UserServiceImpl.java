@@ -5,6 +5,7 @@ import com.jsen.dao.UserDao;
 import com.jsen.pojo.User;
 
 
+
 public class UserServiceImpl implements UserService {
     private UserDao userDao = (UserDao) MyBeanFactory.getBean("userDao");
 

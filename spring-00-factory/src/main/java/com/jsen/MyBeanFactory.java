@@ -54,7 +54,7 @@ public class MyBeanFactory {
      * @return
      */
     public static Object getBean(String bean) {
-        System.out.println("通过反射的方式 + 读取配置文件 进行 终极 的解耦");
+        System.out.println(bean + "通过反射的方式 + 读取配置文件 进行 终极 的解耦");
         Object object = null;
         try {
             Class clazz = Class.forName(properties.getProperty(bean));
